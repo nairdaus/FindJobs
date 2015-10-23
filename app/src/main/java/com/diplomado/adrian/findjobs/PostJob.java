@@ -59,11 +59,9 @@ public class PostJob extends AppCompatActivity {
                 List<String> contacts = new ArrayList<>();
                 contacts.add(String.valueOf(contact.getText()));
 
-
                 job.setTitle(title.getText().toString());
                 job.setDescription(description.getText().toString());
                 job.setContacts(contacts);
-
 
                 newJob(job);
 
