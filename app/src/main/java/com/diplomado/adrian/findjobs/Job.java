@@ -13,13 +13,13 @@ public class Job {
     private String description;
     private String posted_date;
 
-    private ArrayList<String> contacts;
+    private List<String> contacts;
 
     public Job(){
 
     }
 
-    public Job(int id, String title, String description, String posted_date, ArrayList<String> contacts) {
+    public Job(int id, String title, String description, String posted_date, List<String> contacts) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -59,11 +59,11 @@ public class Job {
         this.posted_date = posted_date;
     }
 
-    public ArrayList<String> getContacts() {
+    public List<String> getContacts() {
         return contacts;
     }
 
-    public void setContacts(ArrayList<String> contacts) {
+    public void setContacts(List<String> contacts) {
         this.contacts = contacts;
     }
 

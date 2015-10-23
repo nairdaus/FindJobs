@@ -27,48 +27,55 @@
             android:elevation="4dp"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ToolbarTheme" />
-
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/top_padding"
-            android:weightSum="1">
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/top_padding"
+                android:weightSum="1">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/labelTitle"
-                android:id="@+id/textTitle" />
-            <EditText
-                android:id="@+id/editTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/labelDescription"
-                android:id="@+id/textDescription"
-                android:textAppearance="?android:attr/textAppearanceMedium"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/labelTitle"
+                    android:id="@+id/textTitle" />
+                <EditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelDescription"
+                    android:id="@+id/textDescription"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:inputType="textMultiLine"
-                android:id="@+id/editDescription" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/labelContact"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/textContact"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editContact"/>
-        </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:inputType="textMultiLine"
+                    android:id="@+id/editDescription" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labelContact"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textContact"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editContact"
+                    android:inputType="phone" />
+
+            </LinearLayout>
+        </ScrollView>
     </FrameLayout>
 
     <android.support.design.widget.FloatingActionButton android:id="@+id/fab"

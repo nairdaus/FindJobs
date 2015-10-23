@@ -48,14 +48,13 @@ public class DetailJob extends AppCompatActivity {
         contacts = (TextView)findViewById(R.id.label_list_contact);
 
         String contactos = "Sin contactos";
-        List<ContactEntity> listaContacts = contactDao._queryJobEntity_Contacts(jobEntity.getId());
+        List<ContactEntity> listaContacts = contactDao.queryBuilder().where(ContactEntityDao.Properties.ContactId.eq(jobEntity.getId())).list();//_queryJobEntity_Contacts(jobEntity.getId());
         if (!listaContacts.isEmpty()){
             contactos = "";
             for (ContactEntity contacto: listaContacts){
                 contactos = contactos + contacto.getNumber()+"\n";
             }
         }
-
 
         title.setText(jobEntity.getTitle());
         description.setText(jobEntity.getDescription());

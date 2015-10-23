@@ -61,7 +61,7 @@ public class SplashScreen extends AppCompatActivity {
                     .build();
 
             JobService api = restAdapter.create(JobService.class);
-            try {
+
                 api.getJob(new Callback<List<Job>>() {
                     @Override
                     public void success(List<Job> jobs, Response response) {
@@ -76,6 +76,7 @@ public class SplashScreen extends AppCompatActivity {
                         ContactEntityDao contactDao = daoDriver.getContactDao(SplashScreen.this);
 
                         jobDao.deleteAll();
+                        contactDao.deleteAll();
 
                         for (Job job:jobs){
                             try {
@@ -86,13 +87,10 @@ public class SplashScreen extends AppCompatActivity {
 
                             jobEntity = new JobEntity(null, job.getTitle(),job.getDescription(),date);
                             jobDao.insert(jobEntity);
-                            Log.d("Nombre del trabajo: ",jobEntity.getTitle());
-                            Log.d("Numero de contactos",String.valueOf(job.getContacts().size()));
 
                             for(String numero:job.getContacts()){
                                 contactEntity = new ContactEntity(null,numero,jobEntity.getId());
                                 contactDao.insert(contactEntity);
-                                Log.d("Numero: ", contactEntity.getNumber()+" :"+contactEntity.getContactId());
                             }
                         }
                         Toast.makeText(SplashScreen.this, "Se ha importado a la base de datos correctamente", Toast.LENGTH_SHORT).show();
@@ -106,13 +104,11 @@ public class SplashScreen extends AppCompatActivity {
                         startApp();
                     }
                 });
-            }catch (Exception e){
-                Log.d("El error es:", e.toString());
-            }
+
 
         }else{
             startApp();
-            //Toast.makeText(SplashScreen.this, "No existe conexion a internet", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "No existe conexion a internet", Toast.LENGTH_SHORT).show();
 
         }
 
