@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Busca Trabajo</string>
+    <string name="jobs_menu">Todos los trabajos</string>
+    <string name="post_job">Publicar</string>
+    <string name="about">Acerca de</string>
+    <string name="title_activity_post_job">Publicar Trabajo</string>
+    <string name="labelTitle">Titulo</string>
+    <string name="labelDescription">Descripcion</string>
+    <string name="labelContact">Contacto</string>
+    <string name="btnPost">Publicar Trabajo</string>
+    <string name="action_jobs">Trabajos</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="btn_new_contact">Nuevo contacto</string>
+    <string name="reload">Recargar</string>
+    <string name="toast_save_job">Se ha guardado el trabajo correctamente</string>
+    <string name="toast_error_job">Ha ocurrido un error y no se pudo guardar el trabajo</string>
+    <string name="no_sync">No se ha podido sincronizar con el servicio</string>
+    <string name="no_inter_jobs">No hay conexion a internet y no hay datos para mostrar</string>
+    <string name="import_db">Se ha importado a la base de datos correctamente</string>
+    <string name="sync_db">Actualizando la base de datos</string>
+    <string name="sub_header_title">Acciones</string>
+</resources>

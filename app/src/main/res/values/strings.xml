@@ -4,13 +4,20 @@
     <string name="post_job">Post</string>
     <string name="about">About</string>
     <string name="title_activity_post_job">PostJob</string>
-    <string name="labelTitle">All Jobs</string>
+    <string name="labelTitle">Title</string>
     <string name="labelDescription">Description</string>
     <string name="labelContact">Contact</string>
     <string name="btnPost">Post Job</string>
     <string name="action_jobs">Jobs</string>
 
 <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btn_new_contact">New Contact</string>
+    <string name="reload">Refresh</string>
+    <string name="toast_save_job">Work has been recorded correctly</string>
+    <string name="toast_error_job">An error has occurred and we were unable to save work</string>
+    <string name="no_sync">Could not synchronize with the service</string>
+    <string name="no_inter_jobs">No internet connection and no data to show</string>
+    <string name="import_db">It has been imported into the database correctly</string>
+    <string name="sync_db">Updating database</string>
+    <string name="sub_header_title">Actions</string>
 </resources>

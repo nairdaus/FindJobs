@@ -27,10 +27,10 @@ import DaoGen.com.greendao.DaoGen.JobEntity;
 public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder>{
 private List<JobEntity> jobs;
 
-private DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+private DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
     public static class JobViewHolder extends RecyclerView.ViewHolder{
-        public TextView idJob;
+    public TextView idJob;
     public TextView title;
     public TextView datePost;
     public View view;
@@ -40,15 +40,7 @@ private DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         idJob = (TextView) itemView.findViewById(R.id.id_job);
         title = (TextView) itemView.findViewById(R.id.job_title);
         datePost = (TextView) itemView.findViewById(R.id.job_date);
-        /*view = itemView;
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(view.getContext(), "Capturado el evento: "+ title.getText().toString(), Toast.LENGTH_SHORT).show();
-                //FragmentManager fragmentManager =
-            }
-        });*/
-    }
+        }
     }
     public JobAdapter(List<JobEntity> jobs) {
         this.jobs = jobs;

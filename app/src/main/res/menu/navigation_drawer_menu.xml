@@ -8,21 +8,17 @@
             android:icon="@drawable/logo"
             android:title="@string/jobs_menu" />
         <item
-            android:id="@+id/item_navigation_drawer_starred"
-            android:icon="@drawable/ic_action_starred"
-            android:title="Starred" />
+            android:id="@+id/item_navigation_drawer_reload"
+            android:icon="@drawable/ic_action_reload"
+            android:title="@string/reload" />
     </group>
 
-    <item android:title="Subheader">
+    <item android:title="@string/sub_header_title">
         <menu>
             <item
                 android:id="@+id/item_navigation_drawer_post"
                 android:icon="@drawable/ic_action_post"
                 android:title="@string/post_job" />
-            <item
-                android:id="@+id/item_navigation_drawer_about"
-                android:icon="@drawable/ic_action_about"
-                android:title="@string/about" />
         </menu>
     </item>
 

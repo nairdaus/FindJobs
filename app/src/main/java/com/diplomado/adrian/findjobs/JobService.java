@@ -1,11 +1,10 @@
 package com.diplomado.adrian.findjobs;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit.Callback;
 import retrofit.http.Body;
-import retrofit.http.Field;
+import retrofit.http.FormUrlEncoded;
 import retrofit.http.GET;
 import retrofit.http.POST;
 
@@ -17,8 +16,6 @@ public interface JobService {
     void getJob(Callback<List<Job>> response);
 
     @POST("/work_posts.json")
-    void createjob(@Body Job job, Callback<Job> response);
-    //void createjob(@Field("title") String title,@Field("description") String description,
-    //              @Field("contacts") ArrayList<String> contacts, Callback<Job> response);
+    void createJob(@Body Job job, Callback<Job> response);
 }
 
